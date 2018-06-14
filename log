@@ -8,3 +8,7 @@ Configuration file: /home/shg/iamshg.github.io/_config.yml
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 [2018-06-14 17:24:22] ERROR `/favicon.ico' not found.
+      Regenerating: 1 file(s) changed at 2018-06-14 20:09:40
+                    _posts/2018-06-14-docker.markdown
+                    ...done in 0.181174335 seconds.
+

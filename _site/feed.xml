@@ -1,13 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-14T17:23:57+08:00</updated><id>http://localhost:4000/</id><title type="html">机器学习总结</title><subtitle>通信工程专业本科生，电子与通信工程硕士生（再读）。</subtitle><entry><title type="html">Docker</title><link href="http://localhost:4000/%E5%AE%9E%E8%B7%B5/2018/06/14/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2018-06-14T10:23:01+08:00</published><updated>2018-06-14T10:23:01+08:00</updated><id>http://localhost:4000/%E5%AE%9E%E8%B7%B5/2018/06/14/docker</id><content type="html" xml:base="http://localhost:4000/%E5%AE%9E%E8%B7%B5/2018/06/14/docker.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-14T20:09:40+08:00</updated><id>http://localhost:4000/</id><title type="html">机器学习总结</title><subtitle>通信工程专业本科生，电子与通信工程硕士生（再读）。</subtitle><entry><title type="html">Docker</title><link href="http://localhost:4000/%E5%AE%9E%E8%B7%B5/2018/06/14/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2018-06-14T10:23:01+08:00</published><updated>2018-06-14T10:23:01+08:00</updated><id>http://localhost:4000/%E5%AE%9E%E8%B7%B5/2018/06/14/docker</id><content type="html" xml:base="http://localhost:4000/%E5%AE%9E%E8%B7%B5/2018/06/14/docker.html">&lt;h1 id=&quot;docker-两个重要概念&quot;&gt;Docker 两个重要概念&lt;/h1&gt;
+&lt;p&gt;对于 Docker ,引用[官网][docker web]的表述，为：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud. 
+Today’s businesses are under pressure to digitally transform but are constrained by existing applications and infrastructure while rationalizing an increasingly diverse portfolio of clouds, datacenters and application architectures.
+Docker enables true independence between applications and infrastructure and developers and IT ops to unlock their potential and creates a model for better collaboration and innovation.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;主要理解就是利用了虚拟化的技术，可以将容器运行在各种架构之上，和 Java 的目的-“write once , run everywhere ”有异曲同工之妙，其实 java 语言也用到了虚拟机的技术，不可避免用到虚拟技术。
+在 Docker 的 [术语表（Glossary）][docker glossary] 介绍了许多 Docker 的 Glossary, 其中 Docker 的 Image 和 Container 两个重要的概念，Image 是生成 Container 的必要条件。类似于 Java 中的 Instance 的生成的必要条件是存在 Class 。&lt;/p&gt;
+&lt;h2 id=&quot;docker-镜像image&quot;&gt;Docker 镜像(Image)&lt;/h2&gt;
+&lt;p&gt;对于 Docker Image 解释为：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A Docker Image is the template (application plus required binaries and libraries) needed to build a running Docker Container (the running instance of that image).&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;官方的解释可以查看 glossary 中的 [image][docker glossary] 定义。&lt;/p&gt;
+&lt;h2 id=&quot;docker-容器container&quot;&gt;Docker 容器(Container)&lt;/h2&gt;
+&lt;p&gt;同样也可以查看 glossary 中 [container][docker glossary] 的定义。&lt;/p&gt;
+&lt;h2 id=&quot;关系&quot;&gt;关系&lt;/h2&gt;
+&lt;p&gt;一个 Image 可以 实例化多个不同的 Container ，一个 Container 只能由一个 Image 定义。&lt;/p&gt;
+&lt;h1 id=&quot;从-image-获取到-container-生成步骤&quot;&gt;从 Image 获取到 Container 生成步骤&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;获取 Image 
+  – 从 [Docker Hub][https://hub.docker.com/] 或者从国内 mirror 中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;docker pull \[image\]&lt;/code&gt;获取。
+  – 获取 DockerFile , 自动 build Image。&lt;/li&gt;
+  &lt;li&gt;实例化一个 Container&lt;/li&gt;
+  &lt;li&gt;交互启动并运行 Container&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+[docker web]: https://www.docker.com/what-docker
+[docker glossary]: https://docs.docker.com/glossary/
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/&lt;/p&gt;</content><author><name></name></author><summary type="html">Docker 两个重要概念 对于 Docker ,引用官网的表述，为： Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud. Today’s businesses are under pressure to digitally transform but are constrained by existing applications and infrastructure while rationalizing an increasingly diverse portfolio of clouds, datacenters and application architectures. Docker enables true independence between applications and infrastructure and developers and IT ops to unlock their potential and creates a model for better collaboration and innovation.</summary></entry></feed>
