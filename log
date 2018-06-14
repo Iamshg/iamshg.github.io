@@ -1,8 +1,10 @@
-Configuration file: /home/shg/my-awesome-site/_config.yml
-            Source: /home/shg/my-awesome-site
-       Destination: /home/shg/my-awesome-site/_site
+Configuration file: /home/shg/iamshg.github.io/_config.yml
+            Source: /home/shg/iamshg.github.io
+       Destination: /home/shg/iamshg.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
-                    done in 0.37 seconds.
- Auto-regeneration: enabled for '/home/shg/my-awesome-site'
-jekyll 3.8.3 | Error:  Address already in use - bind(2) for 127.0.0.1:4000
+                    done in 0.549 seconds.
+ Auto-regeneration: enabled for '/home/shg/iamshg.github.io'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+[2018-06-14 17:24:22] ERROR `/favicon.ico' not found.
