@@ -1,0 +1,5 @@
+Configuration file: /home/shg/my-awesome-site/_config.yml
+            Source: /home/shg/my-awesome-site
+       Destination: /home/shg/my-awesome-site/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
