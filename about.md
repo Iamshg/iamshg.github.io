@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
 
-性别: :man:  
-工作: :student:
+性别: 男  
+工作: 学生
