@@ -4,7 +4,7 @@ title:  "Docker"
 date:   2018-06-14 10:23:01 +0800
 categories: 实践
 ---
-
+# *目前是草稿，有语言不严谨之处*
 # Docker 两个重要概念
 对于 Docker ,引用[官网][docker web]的表述，为：
 > Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud. 
