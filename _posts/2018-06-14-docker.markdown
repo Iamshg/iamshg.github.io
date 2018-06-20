@@ -29,7 +29,7 @@ categories: practice
 - 实例化一个 Container
 - 交互启动并运行 Container
 
-
+<!--
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -51,7 +51,7 @@ Some text to show that the reference links can follow later.
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
-
+-->
 
 [docker web]: https://www.docker.com/what-docker
 [docker glossary]: https://docs.docker.com/glossary/
