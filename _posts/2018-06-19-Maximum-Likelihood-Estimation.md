@@ -2,7 +2,6 @@
 layout: post
 title: "Deeplearningbook MLE(P132)"
 categories: DeeplearningbookNote
-
 ---
 #*草稿,Draft*
 # The Note of Maximum Likelihood Estimation
