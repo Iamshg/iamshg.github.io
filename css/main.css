@@ -1,13 +1,9 @@
-<<<<<<< HEAD
- font-family: "Times New Roman", Times, serif;
 body {
  	 margin: 60px auto; width: 70%; 
 	style='font-family: "Times New Roman", Times, serif;'
       }
-=======
 
 body { margin: 60px auto; width: 70%; style='font-family="Serif"'}
->>>>>>> 68366273b62775724a950d813f4aaf25a3ebbb83
 
 a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
