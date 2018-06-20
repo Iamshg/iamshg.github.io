@@ -4,12 +4,12 @@
  <title>shg's Blog</title>
  <link href="http://iamshg.github.io/blog/atom.xml" rel="self"/>
  <link href="http://iamshg.github.io/blog"/>
- <updated>2018-06-20T08:32:16+00:00</updated>
+ <updated>2018-06-20T12:15:58+00:00</updated>
  <id>http://iamshg.github.io/blog</id>
  <author>
    <name>shg</name>
-   <email>iamshghub@gmail.com</email>
- </author>
+   <email>iamshg@outlook.com</email>
+  </author>
 
  
  <entry>
@@ -17,7 +17,7 @@
    <link href="http://iamshg.github.io/blog/2018/06/19/Maximum-Likelihood-Estimation"/>
    <updated>2018-06-19T00:00:00+00:00</updated>
    <id>http://iamshg.github.io//blog/2018/06/19/Maximum-Likelihood-Estimation</id>
-   <content type="html">&lt;p&gt;#&lt;em&gt;草稿,Draft&lt;/em&gt;&lt;/p&gt;
+   <content type="html">&lt;h1 id=&quot;当前是草稿有不严谨之处&quot;&gt;当前是&lt;em&gt;草稿&lt;/em&gt;，有不严谨之处&lt;/h1&gt;
 &lt;h1 id=&quot;the-note-of-maximum-likelihood-estimation&quot;&gt;The Note of Maximum Likelihood Estimation&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;problem&lt;/strong&gt; is that how to derive [formula 5.59][formula] from [formula 5.58][formula] using empirical distribution &lt;script type=&quot;math/tex&quot;&gt;p_{data}&lt;/script&gt;&lt;/p&gt;
@@ -31,7 +31,7 @@
    <id>http://iamshg.github.io//blog/2018/06/14/docker</id>
    <content type="html">&lt;h1 id=&quot;目前是草稿有语言不严谨之处&quot;&gt;&lt;em&gt;目前是草稿，有语言不严谨之处&lt;/em&gt;&lt;/h1&gt;
 &lt;h1 id=&quot;docker-两个重要概念&quot;&gt;Docker 两个重要概念&lt;/h1&gt;
-&lt;p&gt;对于 Docker ,引用[官网][docker web]的表述，为：&lt;/p&gt;
+&lt;p&gt;对于 &lt;a href=&quot;https://www.google.com&quot;&gt;Docker&lt;/a&gt; ,引用&lt;a href=&quot;https://www.docker.com/what-docker&quot;&gt;官网&lt;/a&gt;的表述，为：&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud. 
 Today’s businesses are under pressure to digitally transform but are constrained by existing applications and infrastructure while rationalizing an increasingly diverse portfolio of clouds, datacenters and application architectures.
@@ -39,43 +39,63 @@ Docker enables true independence between applications and infrastructure and dev
 &lt;/blockquote&gt;
 
 &lt;p&gt;主要理解就是利用了虚拟化的技术，可以将容器运行在各种架构之上，和 Java 的目的-“write once , run everywhere ”有异曲同工之妙，其实 java 语言也用到了虚拟机的技术，不可避免用到虚拟技术。
-在 Docker 的 [术语表（Glossary）][docker glossary] 介绍了许多 Docker 的 Glossary, 其中 Docker 的 Image 和 Container 两个重要的概念，Image 是生成 Container 的必要条件。类似于 Java 中的 Instance 的生成的必要条件是存在 Class 。&lt;/p&gt;
+在 Docker 的 &lt;a href=&quot;https://docs.docker.com/glossary/&quot;&gt;术语表（Glossary）&lt;/a&gt; 介绍了许多 Docker 的 Glossary, 其中 Docker 的 Image 和 Container 两个重要的概念，Image 是生成 Container 的必要条件。类似于 Java 中的 Instance 的生成的必要条件是存在 Class 。&lt;/p&gt;
 &lt;h2 id=&quot;docker-镜像image&quot;&gt;Docker 镜像(Image)&lt;/h2&gt;
 &lt;p&gt;对于 Docker Image 解释为：&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;A Docker Image is the template (application plus required binaries and libraries) needed to build a running Docker Container (the running instance of that image).&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;官方的解释可以查看 glossary 中的 [image][docker glossary] 定义。&lt;/p&gt;
+&lt;p&gt;官方的解释可以查看 glossary 中的 &lt;a href=&quot;https://docs.docker.com/glossary/&quot;&gt;image&lt;/a&gt; 定义。&lt;/p&gt;
 &lt;h2 id=&quot;docker-容器container&quot;&gt;Docker 容器(Container)&lt;/h2&gt;
-&lt;p&gt;同样也可以查看 glossary 中 [container][docker glossary] 的定义。&lt;/p&gt;
+&lt;p&gt;同样也可以查看 glossary 中 &lt;a href=&quot;https://docs.docker.com/glossary/&quot;&gt;container&lt;/a&gt; 的定义。&lt;/p&gt;
 &lt;h2 id=&quot;关系&quot;&gt;关系&lt;/h2&gt;
 &lt;p&gt;一个 Image 可以 实例化多个不同的 Container ，一个 Container 只能由一个 Image 定义。&lt;/p&gt;
 &lt;h1 id=&quot;从-image-获取到-container-生成步骤&quot;&gt;从 Image 获取到 Container 生成步骤&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;获取 Image 
-  – 从 [Docker Hub][https://hub.docker.com/] 或者从国内 mirror 中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;docker pull \[image\]&lt;/code&gt;获取。
+  – 从 &lt;a href=&quot;https://hub.docker.com/&quot;&gt;Docker Hub&lt;/a&gt; 或者从国内 mirror 中使用 &lt;a href=&quot;https://docs.docker.com/glossary/&quot;&gt;docker pull&lt;/a&gt; 获取。
   – 获取 DockerFile , 自动 build Image。&lt;/li&gt;
   &lt;li&gt;实例化一个 Container&lt;/li&gt;
   &lt;li&gt;交互启动并运行 Container&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-[docker web]: https://www.docker.com/what-docker
-[docker glossary]: https://docs.docker.com/glossary/
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/&lt;/p&gt;
+&lt;!--
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com &quot;Google's Homepage&quot;)
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or &lt;http://www.example.com&gt; and sometimes 
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+--&gt;
+
 </content>
  </entry>
  
  <entry>
-   <title>shg, </title>
-   <link href="http://iamshg.github.io/blog/2014/04/30/hank-quinlan-site-launched"/>
+   <title>For Grateful</title>
+   <link href="http://iamshg.github.io/blog/2014/04/30/For-Grateful"/>
    <updated>2014-04-30T00:00:00+00:00</updated>
-   <id>http://iamshg.github.io//blog/2014/04/30/hank-quinlan-site-launched</id>
-   <content type="html">&lt;p&gt;Well. Finally got around to putting this old website together. Neat thing about it - powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
-&lt;script type=&quot;math/tex&quot;&gt;a^2 + b^2 = c^2&lt;/script&gt;&lt;/p&gt;
+   <id>http://iamshg.github.io//blog/2014/04/30/For-Grateful</id>
+   <content type="html">&lt;h2 id=&quot;be-grateful&quot;&gt;Be Grateful:&lt;/h2&gt;
+&lt;p&gt;Thanks for Jonathan McGlone and the team of jekyll.&lt;br /&gt;
+This is demo data created by &lt;a href=&quot;http://jmcglone.com&quot;&gt;Jonathan McGlone&lt;/a&gt; and used in a &lt;a href=&quot;http://jmcglone.com/guides/github-pages&quot;&gt;step-by-step beginners guide&lt;/a&gt; to creating and hosting a personal website using GitHub and Jekyll. &lt;br /&gt;
+Users are free to copy and re-use any and all of the code contained here without contacting me.&lt;/p&gt;
 </content>
  </entry>
  
