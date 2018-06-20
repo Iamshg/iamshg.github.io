@@ -4,7 +4,7 @@
  <title>shg's Blog</title>
  <link href="http://iamshg.github.io/blog/atom.xml" rel="self"/>
  <link href="http://iamshg.github.io/blog"/>
- <updated>2018-06-20T12:15:58+00:00</updated>
+ <updated>2018-06-20T12:23:28+00:00</updated>
  <id>http://iamshg.github.io/blog</id>
  <author>
    <name>shg</name>
@@ -84,18 +84,6 @@ Some text to show that the reference links can follow later.
 [link text itself]: http://www.reddit.com
 --&gt;
 
-</content>
- </entry>
- 
- <entry>
-   <title>For Grateful</title>
-   <link href="http://iamshg.github.io/blog/2014/04/30/For-Grateful"/>
-   <updated>2014-04-30T00:00:00+00:00</updated>
-   <id>http://iamshg.github.io//blog/2014/04/30/For-Grateful</id>
-   <content type="html">&lt;h2 id=&quot;be-grateful&quot;&gt;Be Grateful:&lt;/h2&gt;
-&lt;p&gt;Thanks for Jonathan McGlone and the team of jekyll.&lt;br /&gt;
-This is demo data created by &lt;a href=&quot;http://jmcglone.com&quot;&gt;Jonathan McGlone&lt;/a&gt; and used in a &lt;a href=&quot;http://jmcglone.com/guides/github-pages&quot;&gt;step-by-step beginners guide&lt;/a&gt; to creating and hosting a personal website using GitHub and Jekyll. &lt;br /&gt;
-Users are free to copy and re-use any and all of the code contained here without contacting me.&lt;/p&gt;
 </content>
  </entry>
  
