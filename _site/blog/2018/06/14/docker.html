@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Docker</title>
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script>
+    alert( 'Hello, world!' );
+  </script>
+    <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+
+
+  <body>
+    <nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/cv">CV</a></li>
+<li><a href="/blog">Blog</a></li>
+</ul>
+    </nav>
+<div class="container">
+
+  <h1>Docker</h1>
+<p class="meta">14 Jun 2018</p>
+
+<div class="post">
+  <h1 id="目前是草稿有语言不严谨之处"><em>目前是草稿，有语言不严谨之处</em></h1>
+<h1 id="docker-两个重要概念">Docker 两个重要概念</h1>
+<p>对于 Docker ,引用[官网][docker web]的表述，为：</p>
+<blockquote>
+  <p>Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud. 
+Today’s businesses are under pressure to digitally transform but are constrained by existing applications and infrastructure while rationalizing an increasingly diverse portfolio of clouds, datacenters and application architectures.
+Docker enables true independence between applications and infrastructure and developers and IT ops to unlock their potential and creates a model for better collaboration and innovation.</p>
+</blockquote>
+
+<p>主要理解就是利用了虚拟化的技术，可以将容器运行在各种架构之上，和 Java 的目的-“write once , run everywhere ”有异曲同工之妙，其实 java 语言也用到了虚拟机的技术，不可避免用到虚拟技术。
+在 Docker 的 [术语表（Glossary）][docker glossary] 介绍了许多 Docker 的 Glossary, 其中 Docker 的 Image 和 Container 两个重要的概念，Image 是生成 Container 的必要条件。类似于 Java 中的 Instance 的生成的必要条件是存在 Class 。</p>
+<h2 id="docker-镜像image">Docker 镜像(Image)</h2>
+<p>对于 Docker Image 解释为：</p>
+<blockquote>
+  <p>A Docker Image is the template (application plus required binaries and libraries) needed to build a running Docker Container (the running instance of that image).</p>
+</blockquote>
+
+<p>官方的解释可以查看 glossary 中的 [image][docker glossary] 定义。</p>
+<h2 id="docker-容器container">Docker 容器(Container)</h2>
+<p>同样也可以查看 glossary 中 [container][docker glossary] 的定义。</p>
+<h2 id="关系">关系</h2>
+<p>一个 Image 可以 实例化多个不同的 Container ，一个 Container 只能由一个 Image 定义。</p>
+<h1 id="从-image-获取到-container-生成步骤">从 Image 获取到 Container 生成步骤</h1>
+<ul>
+  <li>获取 Image 
+  – 从 [Docker Hub][https://hub.docker.com/] 或者从国内 mirror 中使用<code class="highlighter-rouge">docker pull \[image\]</code>获取。
+  – 获取 DockerFile , 自动 build Image。</li>
+  <li>实例化一个 Container</li>
+  <li>交互启动并运行 Container</li>
+</ul>
+
+<p>Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+[docker web]: https://www.docker.com/what-docker
+[docker glossary]: https://docs.docker.com/glossary/
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/</p>
+
+</div>
+
+
+</div>
+  
+  <footer>
+   <ul>
+   <li><a href="iamshg@outlook.com">email</a></li>
+   <li><a href="https://github.com/iamshg">github.com/iamshg</a></li>
+   </ul>
+  </footer>
+  </body>
+
+</html>
