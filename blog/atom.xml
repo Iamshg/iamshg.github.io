@@ -11,8 +11,8 @@ layout: feed
  <id>http://iamshg.github.io/blog</id>
  <author>
    <name>shg</name>
-   <email>iamshghub@gmail.com</email>
- </author>
+   <email>iamshg@outlook.com</email>
+  </author>
 
  {% for post in site.posts %}
  <entry>
