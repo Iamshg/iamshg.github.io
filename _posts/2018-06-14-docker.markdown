@@ -24,7 +24,7 @@ categories: practice
 一个 Image 可以 实例化多个不同的 Container ，一个 Container 只能由一个 Image 定义。
 # 从 Image 获取到 Container 生成步骤
 - 获取 Image 
-	-- 从 [Docker Hub][https://hub.docker.com/] 或者从国内 mirror 中使用`[docker pull][image]`获取。
+	-- 从 [Docker Hub](https://hub.docker.com/) 或者从国内 mirror 中使用`[docker pull][image]`获取。
 	-- 获取 DockerFile , 自动 build Image。
 - 实例化一个 Container
 - 交互启动并运行 Container
