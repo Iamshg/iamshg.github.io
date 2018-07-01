@@ -14,7 +14,7 @@ After the work of selecting model distribution type done,next step is to learn c
 ## Theory Basis :  
 Given sample data $X = {x^1,x^2,\dots}$ , The Derivation is wrote below.  
 $$\Theta_{ML} = argmax_{\Theta}\sum_{i=1}^{m}\log{P_{model}(x^i,\theta)$$
-
+aaa
 
 $$
 \begin{align*}
