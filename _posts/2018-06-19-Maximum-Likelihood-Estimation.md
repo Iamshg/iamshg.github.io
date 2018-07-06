@@ -24,22 +24,8 @@ $$
 \end{align*}
 $$
 
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
+$\hat{p}$ is empirical distribution of $x$.Where $\#x$ is the number of x in sample set and the $x$ is different with $x^i$ . You can understand $x$ and $x^i$ in [this way](https://stats.stackexchange.com/a/320503/213737) :  
+For example : $X = {1,2,3,1,2,5}$ and $x^{(1)}$ is the first element $1$ ,$x^{(2)}$ is the second element $2$ and so on . There will be $x^{(1)},\cdots,x^{(6)}$ six elements ,but the $x$ is can only take four value 1,2,3,5 ,which is four . $\#1$ and $\#2$ both are 2,and anothers are 1 .
 
 one The following is a math block:
 
