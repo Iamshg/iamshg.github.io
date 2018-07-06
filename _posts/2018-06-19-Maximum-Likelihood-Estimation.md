@@ -16,7 +16,6 @@ Given sample data $X = {x^1,x^2,\dots}$ , The Derivation is wrote below.
 
 $$
 \begin{align*}
-\Theta_{ML} = argmax_{\Theta}\sum_{i=1}^m \log_{P_{model}(x^i,\theta)
 \end{align*}
 $$
 
@@ -40,6 +39,8 @@ $$
 one The following is a math block:
 
 $$ 5 + 5 $$
+
+$$ \Theta_{ML} = argmax_{\Theta}\sum_{i=1}^m \log_{P_model}{(x^i,\theta)} $$
 
 But next comes a paragraph with an inline math statement:
 
