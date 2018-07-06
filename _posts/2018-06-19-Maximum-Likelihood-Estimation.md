@@ -12,11 +12,14 @@ At the first step , distribution type is selected by person using theory and pri
 ## way :  
 After the work of selecting model distribution type done,next step is to learn concrete value of parameter of model distribution from sample.Maximux Likelihood Estimation is a way to do that.  
 ## Theory Basis :  
-Given sample data $X = {x^1,x^2,\dots}$ , The Derivation is wrote below.
+Given sample data $X = {x^{(1)},x^{(2)},\cdots}$ , The Derivation is wrote below.
 
 $$
 \begin{align*}
-\Theta_{ML} = argmax_{\Theta}\sum_{i=1}^m \log_{P_{model}}{(x^i,\theta)}
+\Theta_{ML} & = argmax_{\Theta}\sum_{i=1}^m \log_{P_{model}}{(x^i,\theta)} \\
+            & = \frac{1}{m} argmax_{\Theta}\sum_{i=1}^m \log_{P_{model}}{(x^i,\theta)}
+	    & = \frac{1}{m} argmax_{\Theta}\sum_{i=1}^m \log_{P_{model}}{(x,\theta)}\times\#x
+
 \end{align*}
 $$
 
