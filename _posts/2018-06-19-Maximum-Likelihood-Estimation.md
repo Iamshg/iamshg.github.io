@@ -16,6 +16,7 @@ Given sample data $X = {x^1,x^2,\dots}$ , The Derivation is wrote below.
 
 $$
 \begin{align*}
+
 \end{align*}
 $$
 
