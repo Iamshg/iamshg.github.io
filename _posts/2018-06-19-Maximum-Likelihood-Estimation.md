@@ -37,7 +37,5 @@ $$ 5 + 5 $$
 
 But next comes a paragraph with an inline math statement:$ 5 + 5 $
 
-If you don’t even want the inline math statement, escape the first two dollar signs:
-
-\$\$ 5 + 5 $$
+If you don’t even want the inline math statement, escape the first two dollar signs:\$\$ 5 + 5 $$
 
