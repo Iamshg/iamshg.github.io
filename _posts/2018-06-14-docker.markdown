@@ -50,7 +50,7 @@ categories: practice
 ```bash
 	sudo docker create -t -i radioml/ml --name ml-container /bin/bash
 ```
-, 此时可以通过 `sudo docker images` 或者 `sudo docker image ls` (**注意,这里的 image 一个是复数一个是单数**)
+	, 此时可以通过 `sudo docker images` 或者 `sudo docker image ls` (**注意,这里的 image 一个是复数一个是单数**)
 - 启动实例化的 container . 
 ```bash
 	sudo docker start -a -i ml-container
