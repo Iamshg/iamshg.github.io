@@ -1,4 +1,4 @@
 name: shg 
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-highlighter: rouge
+syntax_highlighter: rouge
