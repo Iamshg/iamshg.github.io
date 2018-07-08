@@ -46,18 +46,36 @@ categories: practice
 ``` bash
 	sudo docker pull radioml/ml
 ```
-``` python
-	def foo():
-		one
+- 将下载下来的 image 实例化一个 container ,命名为 ml-container . 
+```bash
+	sudo docker create -t -i radioml/ml --name ml-container /bin/bash
 ```
-
-- 将下载下来的 image 实例化一个 container ,命名为 `ml-container` . `sudo docker create -t -i radioml/ml --name ml-container /bin/bash` , 此时可以通过 `sudo docker images` 或者 `sudo docker image ls` (**注意,这里的 image 一个是复数一个是单数**)
-- 启动实例化的 container . `sudo docker start -a -i ml-container`
-- 进入 docker 终端执行`sudo apt-get update ; sudo apt install -y tex-live`
-- 退出 ml-container . `exit` 
-- 使用最新的 ml-container 生成 image , 并命名为radioml/ml:v1 . `sudo docker commit ml-container radioml/ml:v1`
-- 重命名镜像 `sudo docker rename radioml/ml:v1 iamshg/ml:v1`(*我的docker hub 名为iamshg*)
-- 登录自己的 docker hub ,推送到自己的 docker hub 仓库. `sudo docker login ; sudo docker push iamshg/ml:v1`  
+, 此时可以通过 `sudo docker images` 或者 `sudo docker image ls` (**注意,这里的 image 一个是复数一个是单数**)
+- 启动实例化的 container . 
+```bash
+	sudo docker start -a -i ml-container
+```
+- 进入 docker 终端执行
+```bash
+	sudo apt-get update ; sudo apt install -y tex-live
+```
+- 退出 ml-container . 
+```bash
+	exit
+```
+- 使用最新的 ml-container 生成 image , 并命名为radioml/ml:v1 . 
+```bash
+	sudo docker commit ml-container radioml/ml:v1
+```
+- 重命名镜像 
+```bash
+	sudo docker rename radioml/ml:v1 iamshg/ml:v1
+```
+(*我的docker hub 名为iamshg*)
+- 登录自己的 docker hub ,推送到自己的 docker hub 仓库. 
+```bash
+	sudo docker login ; sudo docker push iamshg/ml:v1
+```  
 
 
 <!--
