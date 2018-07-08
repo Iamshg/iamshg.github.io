@@ -39,7 +39,9 @@ categories: practice
 - 退出 ml-container . `exit` 
 - 使用最新的 ml-container 生成 image , 并命名为radioml/ml:v1 . `sudo docker commit ml-container radioml/ml:v1`
 - 重命名镜像 `sudo docker rename radioml/ml:v1 iamshg/ml:v1`(*我的docker hub 名为iamshg*)
-- 登录自己的 docker hub ,推送到自己的 docker hub 仓库. `sudo docker login ; sudo docker push iamshg/ml:v1`
+- 登录自己的 docker hub ,推送到自己的 docker hub 仓库. `sudo docker login ; sudo docker push iamshg/ml:v1`  
+
+
 <!--
 [I'm an inline-style link](https://www.google.com)
 
