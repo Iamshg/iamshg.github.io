@@ -4,6 +4,7 @@ title: "Deeplearningbook MLE(P132)"
 categories: DeeplearningbookNote
 ---
 # The Note of Maximum Likelihood Estimation  
+
 ## Aim :  
 
 - Selecting right distribution('s type) of all data (given some special distribution types);
