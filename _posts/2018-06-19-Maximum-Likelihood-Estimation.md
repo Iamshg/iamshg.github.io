@@ -7,7 +7,7 @@ categories: DeeplearningbookNote
 
 #### Aim :  
 
-- Selecting right distribution('s type) of all data (given some special distribution types);
+- Selecting right distribution('s type) of all data (from some special distribution types);
 - Make the right selection of parameters.  
 At the first step , distribution type is selected by person using theory and priori knowledge of samples,but sometimes it would go wrong due to imature theory and wrong priori-knowledge.  
 
