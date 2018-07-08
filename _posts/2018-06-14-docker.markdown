@@ -34,7 +34,11 @@ categories: practice
 实验要求:从 docker hub 中获取 radioml/ml:least image , 并且生成一个名为 ml-container 的 container , 在该容器中安装 tex-live 软件,安装结束后,在此将修改后 ml-container 打包成新的image ,命名为 radioml/ml:v1 ,结束操作.将 radioml/ml:v1 重命名为 [自己的docker hub 名]/ml:v1
 - 从 docker hub 获取 image:  
 ``` bash
-sudo docker pull radioml/ml
+	sudo docker pull radioml/ml
+```
+``` python
+def foo():
+	one
 ```
 - 将下载下来的 image 实例化一个 container ,命名为 `ml-container` . `sudo docker create -t -i radioml/ml --name ml-container /bin/bash` , 此时可以通过 `sudo docker images` 或者 `sudo docker image ls` (**注意,这里的 image 一个是复数一个是单数**)
 - 启动实例化的 container . `sudo docker start -a -i ml-container`
