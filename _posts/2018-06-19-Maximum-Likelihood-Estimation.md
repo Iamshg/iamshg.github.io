@@ -28,14 +28,6 @@ $$
 \end{align*}
 $$
 
-$\hat{p}$ is empirical distribution of $x$.Where $\#x$ is the number of x in sample set and the $x$ is different with $x^i$ . You can understand $x$ and $x^i$ in [this way](https://stats.stackexchange.com/a/320503/213737) :  
-For example : $X = \left{1,2,3,1,2,5\right}$ and $x^{(1)}$ is the first element $1$ ,$x^{(2)}$ is the second element $2$ and so on . There will be $x^{(1)},\cdots,x^{(6)}$ six elements ,but the $x$ is can only take four value 1,2,3,5 ,which is four . $\#1$ and $\#2$ both are 2,and anothers are 1 .
-
-one The following is a math block:
-
-$$ 5 + 5 $$
-
-But next comes a paragraph with an inline math statement:$ 5 + 5 $
-
-If you don’t even want the inline math statement, escape the first two dollar signs:\$\$ 5 + 5 $$
+$\hat{p}$ is empirical distribution of $x$.Where $#x$ is the number of x in sample set and the $x$ is different with $x^i$ . You can understand $x$ and $x^i$ in [this way](https://stats.stackexchange.com/a/320503/213737) :  
+For example : $X = {1,2,3,1,2,5}$ and $x^{(1)}$ is the first element $1$ ,$x^{(2)}$ is the second element $2$ and so on . There will be $x^{(1)},\cdots,x^{(6)}$ six elements ,but the $x$ is can only take four value 1,2,3,5 ,which is four . $#1$ and $#2$ both are 2,and anothers are 1 .
 
