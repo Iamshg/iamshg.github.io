@@ -5,7 +5,7 @@ categories: DeeplearningbookNote
 ---
 # The Note of Maximum Likelihood Estimation  
 
-## Aim :  
+<h2> Aim : </h2> 
 
 - Selecting right distribution('s type) of all data (given some special distribution types);
 - Make the right selection of parameters.  
