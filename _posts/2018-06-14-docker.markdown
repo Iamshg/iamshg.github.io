@@ -4,6 +4,16 @@ title:  "Docker"
 date:   2018-06-14 10:23:01 +0800
 categories: practice
 ---
+
+``` bash
+        sudo docker pull radioml/ml
+```
+``` python
+        def foo():
+                one 
+```
+	def foo():
+
 # *目前是草稿，有语言不严谨之处*
 ### Docker 两个重要概念
 对于 [Docker](https://www.google.com) ,引用[官网][docker web]的表述，为：
@@ -37,9 +47,10 @@ categories: practice
 	sudo docker pull radioml/ml
 ```
 ``` python
-def foo():
-	one
+	def foo():
+		one
 ```
+
 - 将下载下来的 image 实例化一个 container ,命名为 `ml-container` . `sudo docker create -t -i radioml/ml --name ml-container /bin/bash` , 此时可以通过 `sudo docker images` 或者 `sudo docker image ls` (**注意,这里的 image 一个是复数一个是单数**)
 - 启动实例化的 container . `sudo docker start -a -i ml-container`
 - 进入 docker 终端执行`sudo apt-get update ; sudo apt install -y tex-live`
