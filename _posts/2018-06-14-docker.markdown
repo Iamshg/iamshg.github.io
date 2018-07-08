@@ -5,7 +5,7 @@ date:   2018-06-14 10:23:01 +0800
 categories: practice
 ---
 # *目前是草稿，有语言不严谨之处*
-#### Docker 两个重要概念
+### Docker 两个重要概念
 对于 [Docker](https://www.google.com) ,引用[官网][docker web]的表述，为：
 > Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud. 
 > Today’s businesses are under pressure to digitally transform but are constrained by existing applications and infrastructure while rationalizing an increasingly diverse portfolio of clouds, datacenters and application architectures.
@@ -13,14 +13,14 @@ categories: practice
 
 主要理解就是利用了虚拟化的技术，可以将容器运行在各种架构之上，和 Java 的目的-“write once , run everywhere ”有异曲同工之妙，其实 java 语言也用到了虚拟机的技术，不可避免用到虚拟技术。
 在 Docker 的 [术语表（Glossary）][docker glossary] 介绍了许多 Docker 的 Glossary, 其中 Docker 的 Image 和 Container 两个重要的概念，Image 是生成 Container 的必要条件。类似于 Java 中的 Instance 的生成的必要条件是存在 Class 。
-#### Docker 镜像(Image)
+### Docker 镜像(Image)
 对于 Docker Image 解释为：
 > A Docker Image is the template (application plus required binaries and libraries) needed to build a running Docker Container (the running instance of that image).
 
 官方的解释可以查看 glossary 中的 [image][docker glossary] 定义。
-#### Docker 容器(Container) 
+### Docker 容器(Container) 
 同样也可以查看 glossary 中 [container][docker glossary] 的定义。
-#### 关系
+### 关系
 一个 Image 可以 实例化多个不同的 Container ，一个 Container 只能由一个 Image 定义。
 #### 从 Image 获取到 Container 生成步骤
 - 获取 Image 
@@ -29,10 +29,13 @@ categories: practice
 - 实例化一个 Container
 - 交互启动并运行 Container
 
-#### 实践
+### 实践
 ##### 实验1:
 实验要求:从 docker hub 中获取 radioml/ml:least image , 并且生成一个名为 ml-container 的 container , 在该容器中安装 tex-live 软件,安装结束后,在此将修改后 ml-container 打包成新的image ,命名为 radioml/ml:v1 ,结束操作.将 radioml/ml:v1 重命名为 [自己的docker hub 名]/ml:v1
-- 从 docker hub 获取 image:  `sudo docker pull radioml/ml`
+- 从 docker hub 获取 image:  
+```
+sudo docker pull radioml/ml
+```
 - 将下载下来的 image 实例化一个 container ,命名为 `ml-container` . `sudo docker create -t -i radioml/ml --name ml-container /bin/bash` , 此时可以通过 `sudo docker images` 或者 `sudo docker image ls` (**注意,这里的 image 一个是复数一个是单数**)
 - 启动实例化的 container . `sudo docker start -a -i ml-container`
 - 进入 docker 终端执行`sudo apt-get update ; sudo apt install -y tex-live`
