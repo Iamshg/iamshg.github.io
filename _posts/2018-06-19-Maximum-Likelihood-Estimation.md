@@ -5,17 +5,17 @@ categories: DeeplearningbookNote
 ---
 # The Note of Maximum Likelihood Estimation  
 
-<h2> Aim : </h2> 
+#### Aim :  
 
 - Selecting right distribution('s type) of all data (given some special distribution types);
 - Make the right selection of parameters.  
 At the first step , distribution type is selected by person using theory and priori knowledge of samples,but sometimes it would go wrong due to imature theory and wrong priori-knowledge.  
 
-## Way :  
+#### Way :  
   
 After the work of selecting model distribution type done,next step is to learn concrete value of parameter of model distribution from sample.Maximux Likelihood Estimation is a way to do that.  
 
-## Theory Basis :  
+#### Theory Basis :  
 
 Given sample data $X = {x^{(1)},x^{(2)},\cdots}$ , The Derivation is wrote below.
 
