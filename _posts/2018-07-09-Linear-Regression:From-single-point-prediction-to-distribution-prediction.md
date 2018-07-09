@@ -22,4 +22,4 @@ In this example , the prediction of the model is a point , for example , $\hat{y
 
 ### a distribution  prediction 
 
-
+Once have learnt MLE , we can get a distribution prediction of every $\hat{y}$ value . For example ,we can know the propability of value $3.2$ is $90.1%$ and $3.1$ is $9%$ ,so on . It is not only a value ,but a distribution of $\hat{y}$ . If we want to output a value only , we can select the value $\hat{y}$ of largest probability .
