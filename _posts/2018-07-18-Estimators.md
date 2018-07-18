@@ -1,4 +1,4 @@
----
+-
 layout: post
 title: "Estimators : The relationship of Estimators,point Estimators,Bias,Variance and MLE"
 categories: DeeplearningbookNote
@@ -29,4 +29,4 @@ $$
 \end{align*}
 $$
 
-where $X$ is the simple data and $n$ is the number of elements of sample data .
+where $X$ is the sample data and $n$ is the number of elements of sample data .
