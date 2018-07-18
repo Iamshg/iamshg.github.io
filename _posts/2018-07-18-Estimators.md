@@ -11,11 +11,13 @@ From Wiki :
 Aditionally , Point estimation can be contrasted with interval estimation ; such interval estimates are typically either confidece intervals in the case of frequentist inferene ,or credible intervals in the case of Bayesian inference.   
 ### Estimators
 + Point estimation
--- Maximum likelihood estimator MLE
--- minimum mean syared error MSE
--- nethod of moments and generalized method of moments 
--- ...
-+ Interval estimation
+ - Maximum likelihood estimator MLE
+ - minimum mean syared error MSE
+ - nethod of moments and generalized method of moments 
+ - ...
++ Interval estimationa
+
+
 ### the aim of point estimation
 Through sample data to predict a value of population parameter .  
 ### formula
@@ -23,6 +25,7 @@ Through sample data to predict a value of population parameter .
 $$
 \begin{align*}
 \hat{\theta} = g(X) X = x^1,x^2,x^3,\cdots,x^n 
+\end{align*}
 $$
 
-where $x$ is the simple data and $n$ is the number of elements of sample data  .
+where $X$ is the simple data and $n$ is the number of elements of sample data .
