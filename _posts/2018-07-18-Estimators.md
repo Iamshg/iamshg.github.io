@@ -12,10 +12,10 @@ From Wiki :
 Additionally , Point estimation can be contrasted with interval estimation ; such interval estimates are typically either confidece intervals in the case of frequentist inferene ,or credible intervals in the case of Bayesian inference.   
 ### Estimators
 - Point estimation
- - Maximum likelihood estimator MLE
- - minimum mean syared error MSE
- - nethod of moments and generalized method of moments 
- - ...
+  - Maximum likelihood estimator MLE
+  - minimum mean syared error MSE
+  - nethod of moments and generalized method of moments 
+  - ...
 - Interval estimationa
 
 
