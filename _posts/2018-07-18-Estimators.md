@@ -25,7 +25,7 @@ Through sample data to predict a value of population parameter .
 
 $$
 \begin{align*}
-\hat{\theta} = g(X)   X = x^1,x^2,x^3,\cdots,x^n 
+\hat{\theta} = g(X)\qquad X = x^1,x^2,x^3,\cdots,x^n 
 \end{align*}
 $$
 
