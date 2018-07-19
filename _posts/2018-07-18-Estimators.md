@@ -1,4 +1,4 @@
--
+---
 layout: post
 title: "Estimators : The relationship of Estimators,point Estimators,Bias,Variance and MLE"
 categories: DeeplearningbookNote
