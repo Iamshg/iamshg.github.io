@@ -35,10 +35,11 @@ The summary of (1) and (2) is the probability of all test positive , it is no re
 And in the silmilar way with (3) , (4) . 
 
 Now we get the real cancer probability :
+
 $$
 \begin{align*}
 Pr(real\quad cancer \quad after \quad test) & = \frac{Pr(test \quad positive \quad and \quad have \quad cancer\quad before\quad test) }{Pr(test\quad positive\quad in\quad test )} \\
-& =  \frac{0.9%}{0.9%+4.95%} \\
+& =  \frac{0.9\%}{0.9\%+4.95\%} \\
 & =  15.38 %
 \end{align*}
 $$
