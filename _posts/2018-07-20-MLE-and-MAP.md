@@ -23,7 +23,7 @@ Comparing both MLE and MAP equation ,the only thing differs is the inclusion of 
 Many reularized estimation strategies ,such as maximum likelihodd regularized weith weight decay ,can be interpreted as making the MAP approximation to bayesian inference .  
 
 From deeplearningbook P(139)
->As an example , a linear regression model with a Faussian prior on the weights $\omega$ ,.if this prior is given by $\omega \sim \mathcal{N}(\omega;0,\frac{1}{\lambda^2})I^2$ , then the log-prior term $logP(\theta)$ is proportional to the familiar $\lambda\omega^T\oemga$ weight decay penalty ,puls a term that doest depend on $\omega$ and does not affect the learning process . MAP Bayesian inference with a Gaussia prior on the weights thus corresponds to weight decay .
+>As an example , a linear regression model with a Faussian prior on the weights $\omega$ ,.if this prior is given by $\omega \sim \mathcal{N}(\omega;0,\frac{1}{\lambda^2})I^2$ , then the log-prior term $logP(\theta)$ is proportional to the familiar $\lambda\omega^T\omega$ weight decay penalty ,puls a term that doest depend on $\omega$ and does not affect the learning process . MAP Bayesian inference with a Gaussia prior on the weights thus corresponds to weight decay .
 
 
 
