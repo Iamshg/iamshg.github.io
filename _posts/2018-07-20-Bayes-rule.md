@@ -37,7 +37,7 @@ And in the silmilar way with (3) , (4) .
 Now we get the real cancer probability :
 $$
 \begin{align*}
-Pr(real cancer after test) & = \frac{Pr(test positive and have cancer before test) }{Pr(test positive in test )} \\
+Pr(real\quad cancer \quad after \quad test) & = \frac{Pr(test \quad positive \quad and \quad have \quad cancer\quad before\quad test) }{Pr(test\quad positive\quad in\quad test )} \\
 & =  \frac{0.9%}{0.9%+4.95%} \\
 & =  15.38 %
 \end{align*}
