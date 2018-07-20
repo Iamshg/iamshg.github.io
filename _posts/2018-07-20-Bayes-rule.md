@@ -40,7 +40,19 @@ $$
 \begin{align*}
 Pr(real\quad cancer \quad after \quad test) & = \frac{Pr(test \quad positive \quad and \quad have \quad cancer\quad before\quad test) }{Pr(test\quad positive\quad in\quad test )} \\
 & =  \frac{0.9\%}{0.9\%+4.95\%} \\
-& =  15.38 %
+& =  15.38 \%
 \end{align*}
 $$
 
+Insteresting , a positive mammogram only means somebody has a $15.38 \%$ chance really suffer from cancer , not $90\%$ , it is refute common sense . The reason is that there are also have some FP probability , a large people without cancer and misjudgement that they suffer from cancer .
+
+### formula 
+we can turn the process anove into a equation ,suppose event $A$ is someone suffering from cancer before test , $1\%$ , and $X$ is someone viewed as suffering from cancer after test .  
+The formula is :
+
+$$
+\begin{align*}
+\frac{90\%\times1\%}{90\%\times1\%+99\%\times5\%}
+Pr(A|X) = \frac{Pr(X|A)Pr(A)}{Pr(X|A)Pr(A)+Pr(X|\bar{A})Pr(\bar{A})}
+\end{align*}
+$$
