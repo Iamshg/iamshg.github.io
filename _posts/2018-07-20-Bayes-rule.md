@@ -56,3 +56,7 @@ Pr(A|X) & = \frac{90\%\times1\%}{90\%\times1\%+99\%\times5\%}  \\
 & = \frac{Pr(X|A)Pr(A)}{Pr(X|A)Pr(A)+Pr(X|\bar{A})Pr(\bar{A})}
 \end{align*}
 $$
+
+### End
+Bayes told us that test experiment maybe wrong sometimes , we should make use of the prior belief to consider the experiment results .
+
