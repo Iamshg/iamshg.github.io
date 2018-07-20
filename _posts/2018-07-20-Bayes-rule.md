@@ -61,4 +61,4 @@ $$
 Bayes told us that test experiment maybe wrong sometimes , we should make use of the prior belief to consider the experiment results .
 
 ### Cite 
-- [better explianed bayes theorem][https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/]
+- [better explianed bayes theorem](https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/)
