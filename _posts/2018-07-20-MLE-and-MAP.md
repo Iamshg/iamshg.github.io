@@ -25,5 +25,4 @@ Many reularized estimation strategies ,such as maximum likelihodd regularized we
 From deeplearningbook P(139)
 >As an example , a linear regression model with a Faussian prior on the weights $\omega$ ,.if this prior is given by $\omega \sim \mathcal{N}(\omega;0,\frac{1}{\lambda^2}I^2)$ , then the log-prior term $logP(\theta)$ is proportional to the familiar $\lambda\omega^T\omega$ weight decay penalty ,puls a term that doest depend on $\omega$ and does not affect the learning process . MAP Bayesian inference with a Gaussia prior on the weights thus corresponds to weight decay .
 
-
-
+对于MLE和MAP的区别,可以参考一下这个[中文博客](https://www.cnblogs.com/easoncheng/archive/2012/11/08/2760675.html).里面将先验概率的加入看成了是对于模型本身的一种概率分布的考虑.
