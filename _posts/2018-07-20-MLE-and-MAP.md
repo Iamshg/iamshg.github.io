@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MLE(P132) and MAP(P133)"
+title: "MLE(P132) and MAP(P138)"
 categories: DeeplearningbookNote
 ---
 The relationship between MLE and MAP , you should refer to [MLE vs MAP: the connection between Maximum Likelihood and Maximum A Posteriori Estimation](https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/).
