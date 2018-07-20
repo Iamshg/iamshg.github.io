@@ -14,7 +14,7 @@ $$
 \Theta_{MAP} & = argmax_{\theta}\frac{P(X|\theta)P(\theta)}{P(X)} \\
 & = argmax_{\theta}P(X|\theta)P(\theta) \\ 
 & = argmax_{\theta}\sum_ilogP(x_i|\theta)P(\theta) \\
-& = argmax_{\theta}\left(\sum_ilog(x_i|\theta)\right)+logP(\theta)
+& = argmax_{\theta}\left(\left(\sum_ilog(x_i|\theta)\right)+logP(\theta)\right)
 \end{align*}
 $$
 
