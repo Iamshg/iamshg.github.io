@@ -13,7 +13,7 @@ Additionally , Point estimation can be contrasted with interval estimation ; suc
 ### Estimators
 - Point estimation
   - Maximum likelihood estimator MLE
-  - Minimum mean syared error MSE
+  - Minimum mean sqared error MSE
   - Method of moments( 矩 ) and generalized method of moments 
   - ...
 - Interval estimationa
@@ -29,7 +29,7 @@ $$
 \end{align*}
 $$
 
-where $X$ is the sample data and $n$ is the number of elements of sample data .the reason why we can use Bias and Variance to evaluate is that ,from the perspective of freqentists , the $\hat{\theta}$ is a random variable , fixed and unknown . Random Variable has the property of Bias and Variance . So why the $\hat{\theta}$ is a random variable ? Because the sample data $X$ is random variable and the $\hat{\theta}$ is a value of function $g$ respect to $X$ . The function $g$ can be get from the MLE , MSE , and Method of moments and so on . Now we already have some point estimation from these ways , for example , sample mean , sample variance and so on .   
+where $X$ is the sample data and $n$ is the number of elements of sample data .the reason why we can use Bias and Variance to evaluate is that ,from the perspective of freqentists , the $\hat{\theta}$ is a random variable , fixed and unknown . Random Variable has the property of Bias and Variance . So why the $\hat{\theta}$ is a random variable ? Because the sample data $X$ is random variable and the $\hat{\theta}$ is a value of function $g$ respect to $X$ . The function $g$ can be get from the MLE , MSE , and Method of moments and so on . Now we already have some point estimate from these ways , for example , sample mean , sample variance and so on .   
 
 ### Additionally  :
 Bias and variance viewed as property of point estimates $\hat{\theta}$ in textbook. I think it also can be viewed as a standard of a Estimator . 
