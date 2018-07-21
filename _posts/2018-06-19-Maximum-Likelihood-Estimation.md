@@ -21,11 +21,11 @@ Given sample data $X = {x^{(1)},x^{(2)},\cdots}$ , The Derivation is wrote below
 
 $$
 \begin{align*}
-\Theta_{ML} & = argmax_{\Theta}\sum_{i=1}^m \log_{P_{model}}{(x^{(i)},\theta)} \\
-            & = \frac{1}{m} argmax_{\Theta}\sum_{i=1}^m \log_{P_{model}}{(x^{(i)},\theta)}\\
-            & = \frac{1}{m} argmax_{\Theta}\sum_x \log_{P_{model}}{(x,\theta)}\times\#x\\
-            & = argmax_{\Theta}\sum_x \log_{P_{model}}{(x,\theta)}\times\frac{\#x}{m}\\
-            & = argmax_{\Theta} \mathbb{E}_{x\sim\hat{P}}\log_{P_{model}}\left(x,\theta\right)
+\Theta_{ML} & = argmax_{\Theta}\sum_{i=1}^m \log{P_{model}}{(x^{(i)},\theta)} \\
+            & = \frac{1}{m} argmax_{\Theta}\sum_{i=1}^m \log{P_{model}}{(x^{(i)},\theta)}\\
+            & = \frac{1}{m} argmax_{\Theta}\sum_x \log{P_{model}}{(x,\theta)}\times\#x\\
+            & = argmax_{\Theta}\sum_x \log{P_{model}}{(x,\theta)}\times\frac{\#x}{m}\\
+            & = argmax_{\Theta} \mathbb{E}_{x\sim\hat{P}}\log{P_{model}}\left(x,\theta\right)
 \end{align*}
 $$
 
