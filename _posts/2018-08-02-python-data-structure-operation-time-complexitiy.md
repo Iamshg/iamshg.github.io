@@ -26,7 +26,9 @@ categories: 实践
 - 获取最大最小值:max(a),min(a).$O(n)$
 - 深度拷贝:b = a[:],$O(n)$,相当于执行了 n 次赋值操作.
 - 拼接和乘法操作:k\*a,$O(k \times n)$.
-- 排序操作:sorted(a),$O(nlogn)$
+- 排序操作:sorted(a),$O(nlogn)$  
+
+
 [6006 introduce to algorithms python cost Model]: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/readings/python-cost-model/ "6006"
 
 
