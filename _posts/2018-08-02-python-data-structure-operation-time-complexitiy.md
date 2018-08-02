@@ -6,7 +6,7 @@ categories: 实践
 ---
 
 ### python 的内置数据结构
-其中 python 内置的数据结构有链表(list),字典(dict),集合(set),元组(tuple),队列(dequen)等等.其中对 list 和 dict 的使用最为频繁,其下就详细记录一下,自己对 list 操作的时间复杂度的理解.
+其中 python 内置的数据结构有链表(list),字典(dict),集合(set),元组(tuple),队列(quen)等等.其中对 list 和 dict 的使用最为频繁,其下就详细记录一下,自己对 list 操作的时间复杂度的理解.
 
 ### python 数据结构操作的[时间复杂度][python time complexity]
 #### list 的操作的时间复杂度  
