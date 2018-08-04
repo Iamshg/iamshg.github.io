@@ -6,7 +6,8 @@ categories: 实践
 
 ### 问题引出
 - 绘图默认出来的结果字体不满足要求,要求 xlabel , ylabel ,title 和 legend 的字体变大一点.   
-- 字体设置变大之后,导致 xlabel ylable 等等显示不完全,设置 figsize 变大也没有用处,设置 dpi 变大也没有用处,反而显示的线型变粗了,图像更加糟糕.![image]({{"/images/1.png" | absolute_url}})
+- 字体设置变大之后,导致 xlabel ylable 等等显示不完全,设置 figsize 变大也没有用处,设置 dpi 变大也没有用处,反而显示的线型变粗了,图像更加糟糕.  
+![image]({{"/images/1.png" | absolute_url}})
 - 在图像中,有六条线,要根据点划线的点和线的长度进行区分.
 ### 解决方案
 - 针对第一个问题:使得字体变大,在 `ax.set_xlabel` , `ax.set_xlabel` , `ax.legend` 方法中都有一项 `fontsize` 参数,可以更改.也可以通过 `rcparams` 参数进行更改 . 默认的使用是 `rcparams` [参数][https://matplotlib.org/users/customizing.html#dynamic-rc-settings]中的值.例如
@@ -14,7 +15,9 @@ categories: 实践
 ax.set_xlabel(xlabel='xlabel',fontsize=20) # 设置label的字体大小
 ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
 ```
-- 字体设置变大之后,图像变为了![偏离图像]({{"/images/1.png" | absolute_url}}) , 其实这个原因不是因为图像大小太小了,而是 xlabel 和 ylabel 所占的空间变大了, axis 的占用空间比例还是那么大,所以将 xlabel 和 ylabel 所在的区域往边界挤出去了一部分.只需要将 axis 所占的比例变小一点就行,例如如果想让 ylabel 显示的完全,就需要将 axis 向右边移动一下,如果向让 xlabel 和 title  显示完全,需要将 axis 稍微压扁一下.这个可以通过 `Divider,Size,LocatebleAxes` 共同来实现.
+- 字体设置变大之后,图像变为了  
+![偏离图像]({{"/images/1.png" | absolute_url}})   
+, 其实这个原因不是因为图像大小太小了,而是 xlabel 和 ylabel 所占的空间变大了, axis 的占用空间比例还是那么大,所以将 xlabel 和 ylabel 所在的区域往边界挤出去了一部分.只需要将 axis 所占的比例变小一点就行,例如如果想让 ylabel 显示的完全,就需要将 axis 向右边移动一下,如果向让 xlabel 和 title  显示完全,需要将 axis 稍微压扁一下.这个可以通过 `Divider,Size,LocatebleAxes` 共同来实现.
 ```python
 # coding: utf-8
 import matplotlib.pyplot as plt
@@ -59,4 +62,7 @@ if __name__ == "__main__":
     divider = Divider(fig, (0.0, 0.0, 1., 1.), h, v, aspect=False)
     ax.set_axes_locator(divider.new_locator(nx=1, ny=1))
 ```
-显示结果为:![脱离偏离]({{"/images/2.png" | absolute_url}})
+显示结果为:  
+![脱离偏离]({{"/images/2.png" | absolute_url}})  
+其中 figsize 和 dpi 的作用具体参照这个[链接][],其中 figsize 和 dpi 共同决定了图像的大小, figsize 和 dpi 的乘积代表的是图像像素的长和宽,和实际上的英寸没有关系, dpi 是代表的是没有一个平方英寸所拥有的像素点的多少,而 axis 中的线和绘制和文本的打印都是以PPI 来绘制的,(期间一些关系,我也不是很明白),最后结论是dpi不会影响线型的宽度和字体的显示的大小. figsize 和 dpi 两个参数像是绘图用的纸张的型号,例如A4,A1等等,dpi 像笔的粗细,如果 dpi 变大,笔头变粗,但是 dpi 又是一个控制纸张大小的因素,所以图的像素长宽会变大.
+
