@@ -18,7 +18,6 @@ ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
 - 字体设置变大之后,图像变为了  
 ![偏离图像]({{"/images/1.png" | absolute_url}})   
 , 其实这个原因不是因为图像大小太小了,而是 `xlabel` 和 `ylabel` 所占的空间变大了, axis 的占用空间比例还是那么大,所以将 `xlabel` 和 `ylabel` 所在的区域往边界挤出去了一部分.只需要将 `axis` 所占的比例变小一点就行,例如如果想让 `ylabel` 显示的完全,就需要将 `axis` 向右边移动一下,如果向让 `xlabel` 和 `title` 显示完全,需要将 `axis` 稍微压扁一下.这个可以通过 `Divider,Size,LocatebleAxes` 共同来实现.
-
 ```python
 # coding: utf-8
 import matplotlib.pyplot as plt
