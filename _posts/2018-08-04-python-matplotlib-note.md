@@ -5,7 +5,58 @@ categories: 实践
 ---
 
 ### 问题引出
-绘图默认出来的结果字体不满足要求,要求 xlabel , ylabel ,title 和 legend 的字体变大一点.   
-字体设置变大之后,导致 xlabel ylable 等等显示不完全,设置 figsize 变大也没有用处,设置 dpi 变大也没有用处,反而显示的线型变粗了,图像更加糟糕.![image]({{"/images/" | absolute_url}})
+- 绘图默认出来的结果字体不满足要求,要求 xlabel , ylabel ,title 和 legend 的字体变大一点.   
+- 字体设置变大之后,导致 xlabel ylable 等等显示不完全,设置 figsize 变大也没有用处,设置 dpi 变大也没有用处,反而显示的线型变粗了,图像更加糟糕.![image]({{"/images/1.png" | absolute_url}})
+- 在图像中,有六条线,要根据点划线的点和线的长度进行区分.
+### 解决方案
+- 针对第一个问题:使得字体变大,在 `ax.set_xlabel` , `ax.set_xlabel` , `ax.legend` 方法中都有一项 `fontsize` 参数,可以更改.也可以通过 `rcparams` 参数进行更改 . 默认的使用是 `rcparams` [参数][https://matplotlib.org/users/customizing.html#dynamic-rc-settings]中的值.例如
+```python
+ax.set_xlabel(xlabel='xlabel',fontsize=20) # 设置label的字体大小
+ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
+```
+- 字体设置变大之后,图像变为了![偏离图像]({{"/images/1.png" | absolute_url}}) , 其实这个原因不是因为图像大小太小了,而是 xlabel 和 ylabel 所占的空间变大了, axis 的占用空间比例还是那么大,所以将 xlabel 和 ylabel 所在的区域往边界挤出去了一部分.只需要将 axis 所占的比例变小一点就行,例如如果想让 ylabel 显示的完全,就需要将 axis 向右边移动一下,如果向让 xlabel 和 title  显示完全,需要将 axis 稍微压扁一下.这个可以通过 `Divider,Size,LocatebleAxes` 共同来实现.
+```python
+# coding: utf-8
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import Divider, LocatableAxes, Size
 
+def demo_fixed_size_axes():
+    fig1 = plt.figure(1, (6, 6))
+    # The first items are for padding and the second items are for the axes.
+    # sizes are in inch.
+    h = [Size.Fixed(3.0), Size.Fixed(1)]
+    v = [Size.Fixed(3), Size.Fixed(5.)]
+    divider = Divider(fig1, (0.0, 0.0, 1., 1.), h, v, aspect=False)
+    # the width and height of the rectangle is ignored.
+    ax = LocatableAxes(fig1, divider.get_position())
+    ax.set_axes_locator(divider.new_locator(nx=1, ny=1))
+    fig1.add_axes(ax)
+    ax.plot([1, 2, 3])
 
+def demo_fixed_pad_axes():
+    fig = plt.figure(2, (6, 6))
+    # The first & third items are for padding and the second items are for the
+    # axes. Sizes are in inches.
+    h = [Size.Fixed(3.0), Size.Scaled(1.), Size.Fixed(.2)]
+    v = [Size.Fixed(3), Size.Scaled(1.), Size.Fixed(.5)]
+    divider = Divider(fig, (0.0, 0.0, 1., 1.), h, v, aspect=False)
+    # the width and height of the rectangle is ignored.
+    ax = LocatableAxes(fig, divider.get_position())
+    ax.set_axes_locator(divider.new_locator(nx=1, ny=1))
+    fig.add_axes(ax)
+    ax.plot([1, 2, 3])
+
+if __name__ == "__main__":
+    # demo_fixed_size_axes()
+    demo_fixed_pad_axes()
+
+    plt.show()
+```
+最主要的就是 divider 根据 h,v 的设置,将整个 figure 分割开来,再将中间部分设置为 axis 显示部分.例如:
+```python 
+    h = [Size.Fixed(3.0), Size.Scaled(1.), Size.Fixed(.2)]
+    v = [Size.Fixed(3), Size.Scaled(1.), Size.Fixed(.5)]
+    divider = Divider(fig, (0.0, 0.0, 1., 1.), h, v, aspect=False)
+    ax.set_axes_locator(divider.new_locator(nx=1, ny=1))
+```
+显示结果为:![脱离偏离]({{"/images/2.png" | absolute_url}})
