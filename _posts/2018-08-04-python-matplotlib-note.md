@@ -26,11 +26,13 @@ ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
     divider = Divider(fig, (0.0, 0.0, 1., 1.), h, v, aspect=False)
     ax.set_axes_locator(divider.new_locator(nx=1, ny=1))
 ```
+
 显示结果为:  
 ![脱离偏离]({{"/images/2.png" | absolute_url}})  
 其中 figsize 和 dpi 的作用具体参照这个[链接](https://stackoverflow.com/a/47639545/8348294),其中 figsize 和 dpi 共同决定了图像的大小, figsize 和 dpi 的乘积代表的是图像像素的长和宽,和实际上的英寸没有关系, dpi 是代表的是没有一个平方英寸所拥有的像素点的多少,而 axis 中的线和绘制和文本的打印都是以PPI 来绘制的,(期间一些关系,我也不是很明白),最后结论是dpi不会影响线型的宽度和字体的显示的大小. figsize 和 dpi 两个参数像是绘图用的纸张的型号,例如A4,A1等等,dpi 像笔的粗细,如果 dpi 变大,笔头变粗,但是 dpi 又是一个控制纸张大小的因素,所以图的像素长宽会变大.
 
 - 对于只用点划线点和线的长度来定义线型,在 `ax.plot` 方法中有 `linestyle` 中这个参数可以确定点和线的长度.同样也可以通过``linewidth` 设置线的宽度.示例为:
+
 ```python
     ax.plot(ms_2_s(u_connect_cdf_x),u_connect_cdf_y,color='#f9b201',linestyle=(0,(0.3,0.8)),linewidth=1,label='U-Connect')
     ax.plot(ms_2_s(hello_cdf_x),hello_cdf_y,'#1501f9',linestyle = (0,(1,0.4,0.2,0.4)),linewidth=1,label='Hello')
