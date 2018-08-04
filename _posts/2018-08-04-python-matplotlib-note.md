@@ -8,7 +8,8 @@ categories: 实践
 - 绘图默认出来的结果字体不满足要求,要求 `xlabel , ylabel ,title` 和 `legend` 的字体变大一点.   
 - 字体设置变大之后,导致 `xlabel ylable` 等等显示不完全,设置 `figsize` 变大也没有用处,设置 dpi 变大也没有用处,反而显示的线型变粗了,图像更加糟糕.  
 ![image]({{"/images/1.png" | absolute_url,center-image}})
-- 在图像中,有六条线,要根据点划线的点和线的长度进行区分.
+- 在图像中,有六条线,要根据点划线的点和线的长度进行区分.  
+
 ### 解决方案
 - 针对第一个问题:使得字体变大,在 `ax.set_xlabel` , `ax.set_xlabel` , `ax.legend` 方法中都有一项 `fontsize` 参数,可以更改.也可以通过 `rcparams` 参数进行更改 . 默认的使用是 `rcparams` [参数](https://matplotlib.org/users/customizing.html#dynamic-rc-settings)中的值.例如
 ```python
@@ -29,7 +30,8 @@ ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
 ![脱离偏离]({{"/images/2.png" | absolute_url}})  
 其中 figsize 和 dpi 的作用具体参照这个[链接](https://stackoverflow.com/a/47639545/8348294),其中 figsize 和 dpi 共同决定了图像的大小, figsize 和 dpi 的乘积代表的是图像像素的长和宽,和实际上的英寸没有关系, dpi 是代表的是没有一个平方英寸所拥有的像素点的多少,而 axis 中的线和绘制和文本的打印都是以PPI 来绘制的,(期间一些关系,我也不是很明白),最后结论是dpi不会影响线型的宽度和字体的显示的大小. figsize 和 dpi 两个参数像是绘图用的纸张的型号,例如A4,A1等等,dpi 像笔的粗细,如果 dpi 变大,笔头变粗,但是 dpi 又是一个控制纸张大小的因素,所以图的像素长宽会变大.
 
-### 代码
+### 代码  
+
 ```python
 # coding: utf-8
 import matplotlib.pyplot as plt
