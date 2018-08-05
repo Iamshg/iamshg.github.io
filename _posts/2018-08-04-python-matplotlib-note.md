@@ -15,8 +15,8 @@ categories: 实践
 ### 解决方案1
 - 针对第一个问题:使得字体变大,在 `ax.set_xlabel` , `ax.set_xlabel` , `ax.legend` 方法中都有一项 `fontsize` 参数,可以更改.也可以通过 `rcparams` 参数进行更改 . 默认的使用是 `rcparams` [参数](https://matplotlib.org/users/customizing.html#dynamic-rc-settings)中的值.例如
 ```python
-ax.set_xlabel(xlabel='xlabel',fontsize=20) # 设置label的字体大小
-ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
+    ax.set_xlabel(xlabel='xlabel',fontsize=20) # 设置label的字体大小
+    ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
 ```
 - 字体设置变大之后,图像变为了  
 ![偏离图像]({{"/images/1.png" | absolute_url}})   
