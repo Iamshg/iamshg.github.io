@@ -8,9 +8,11 @@ categories: 实践
 - 绘图默认出来的结果字体不满足要求,要求 `xlabel , ylabel ,title` 和 `legend` 的字体变大一点.   
 - 字体设置变大之后,导致 `xlabel ylable` 等等显示不完全,设置 `figsize` 变大也没有用处,设置 dpi 变大也没有用处,反而显示的线型变粗了,图像更加糟糕.  
 ![image]({{"/images/1.png" | absolute_url,center-image}})
-- 在图像中,有六条线,要根据点划线的点和线的长度进行区分.  
+- 在图像中,有六条线,要根据点划线的点和线的长度进行区分.    
 
-### 解决方案
+
+
+### 解决方案1
 - 针对第一个问题:使得字体变大,在 `ax.set_xlabel` , `ax.set_xlabel` , `ax.legend` 方法中都有一项 `fontsize` 参数,可以更改.也可以通过 `rcparams` 参数进行更改 . 默认的使用是 `rcparams` [参数](https://matplotlib.org/users/customizing.html#dynamic-rc-settings)中的值.例如
 ```python
 ax.set_xlabel(xlabel='xlabel',fontsize=20) # 设置label的字体大小
