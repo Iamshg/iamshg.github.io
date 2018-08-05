@@ -21,7 +21,8 @@ ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
 - 字体设置变大之后,图像变为了  
 ![偏离图像]({{"/images/1.png" | absolute_url}})   
 , 其实这个原因不是因为图像大小太小了,而是 `xlabel` 和 `ylabel` 所占的空间变大了, axis 的占用空间比例还是那么大,所以将 `xlabel` 和 `ylabel` 所在的区域往边界挤出去了一部分.只需要将 `axis` 所占的比例变小一点就行,例如如果想让 `ylabel` 显示的完全,就需要将 `axis` 向右边移动一下,如果向让 `xlabel` 和 `title` 显示完全,需要将 `axis` 稍微压扁一下.这个可以通过 `Divider,Size,LocatebleAxes` 共同来实现.
-最主要的就是 divider 根据 h,v 的设置,将整个 figure 分割开来,再将中间部分设置为 axis 显示部分.例如:
+最主要的就是 divider 根据 h,v 的设置,将整个 figure 分割开来,再将中间部分设置为 axis 显示部分.例如:  
+
 ```python 
     h = [Size.Fixed(3.0), Size.Scaled(1.), Size.Fixed(.2)]
     v = [Size.Fixed(3), Size.Scaled(1.), Size.Fixed(.5)]
@@ -29,7 +30,8 @@ ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
     ax.set_axes_locator(divider.new_locator(nx=1, ny=1))
 ```
 
-显示结果为:  
+
+显示结果为1:  
 ![脱离偏离]({{"/images/2.png" | absolute_url}})  
 其中 figsize 和 dpi 的作用具体参照这个[链接](https://stackoverflow.com/a/47639545/8348294),其中 figsize 和 dpi 共同决定了图像的大小, figsize 和 dpi 的乘积代表的是图像像素的长和宽,和实际上的英寸没有关系, dpi 是代表的是没有一个平方英寸所拥有的像素点的多少,而 axis 中的线和绘制和文本的打印都是以PPI 来绘制的,(期间一些关系,我也不是很明白),最后结论是dpi不会影响线型的宽度和字体的显示的大小. figsize 和 dpi 两个参数像是绘图用的纸张的型号,例如A4,A1等等,dpi 像笔的粗细,如果 dpi 变大,笔头变粗,但是 dpi 又是一个控制纸张大小的因素,所以图的像素长宽会变大.
 
