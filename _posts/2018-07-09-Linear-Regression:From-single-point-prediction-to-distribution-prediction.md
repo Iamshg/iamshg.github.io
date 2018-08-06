@@ -22,4 +22,4 @@ In this example , the prediction of the model is a point , for example , $\hat{y
 
 ### a distribution  prediction 
 
-Once have learnt MLE , we can get a distribution prediction of every $\hat{y}$ value . For example ,we can know the propability of value $3.2$ is $0.901$ and $3.1$ is $0.09$ ,so on . It is not only a value ,but a distribution of $\hat{y}$ .(P133 Instead of producing a single prediction $\hat{y}$ ,we now think of the model as producing a confitional distribution $p(y|x)$). If we want to output a value only , we can select the value $\hat{y}$ of largest probability .
+Once have learnt MLE , we can get a distribution prediction of every $\hat{y}$ value . For example ,we can know the propability of value $3.2$ is $0.901$ and $3.1$ is $0.09$ ,so on . It is not only a value ,but a distribution of $\hat{y}$ .(P133 Instead of producing a single prediction $\hat{y}$ ,we now think of the model as producing a confitional distribution $p(y\|x)$). If we want to output a value only , we can select the value $\hat{y}$ of largest probability .
