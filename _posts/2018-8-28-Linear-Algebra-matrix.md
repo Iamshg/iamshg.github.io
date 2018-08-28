@@ -19,7 +19,7 @@ $$
 
 
 假设有一个 m by n 的矩阵 M，需要将其列中心化：
-则为 $ C_m \times M_{{m}\times{n}} $,如果要将其行中心化，则为$ M_{{m} \times {n}} \times  C_n$
+则为 $ C_m \times M_{m \times n} $,如果要将其行中心化，则为$ M_{{m} \times {n}} \times  C_n$
 
 
 ### Idempotent matrix
