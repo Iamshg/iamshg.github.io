@@ -139,8 +139,8 @@ scipy 中的数值计算不同于 MATLAB ，是基于元素的 ， 所以我们�
 $$
 \left\{ 
 \begin{array}{c}
-ax+by+c=x^' \\ 
-dx+ey+f=y^' 
+ax+by+c=x' \\ 
+dx+ey+f=y' 
 \end{array}
 \right.
 $$
@@ -152,13 +152,13 @@ $$
 T = \begin{bmatrix}
     a & b & c & e & d & f 
     \end{bmatrix} \\
-
+,
 A = 
 \begin{bmatrix}
     x_{a1} & x_{a2} & x{a3} \\
     y_{a1} & y_{a2} & y_{a3}
 \end{bmatrix}
-
+,
 R = 
 \begin{bmatrix}
     x_{1} & x_{2} & x_{3} \\
