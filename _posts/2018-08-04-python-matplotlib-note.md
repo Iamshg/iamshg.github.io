@@ -18,7 +18,7 @@ categories: 实践
 ```python
     ax.set_xlabel(xlabel='xlabel',fontsize=20) # 设置label的字体大小
     ax.legend(loc='lower right',fontsize=20) # 设置legend的字体为20
-```  
+```
 
 - 字体设置变大之后,图像变为了  
 ![偏离图像]({{"/images/1.png" | absolute_url}})   
