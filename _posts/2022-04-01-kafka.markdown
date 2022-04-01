@@ -1,7 +1,17 @@
-#kafka 
-# kafka 生产者
+# kafka
 
-# kafka broker
+## kafka 生产者
 
-# kafka 消费者
+## kafka broker
 
+## kafka 消费者
+
+## kafka 实现的语义
+
+### 精准一次
+
+### 至少一次
+
+### 至多一次
+
+## 问题
