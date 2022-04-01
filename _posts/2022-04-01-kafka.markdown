@@ -6,7 +6,9 @@
 1. [kafka spark streaming 精准一次语义实现](https://databricks.com/blog/2015/03/30/improvements-to-kafka-integration-of-spark-streaming.html)
 2. [kafka 官方文档](https://kafka.apache.org/documentation.html#simpleconsumerapi)
 3. [kafka bilibili 尚硅谷](https://kafka.apache.org/documentation.html#simpleconsumerapi)
+
 ## kafka 生产者
+
 为什么要学习Kafka的生产者？ 
 
 我理解：只要向kafka写入数据（无论外部写好的Jar包还是自己写的程序），就得调用kafka的`producer` API。`producer` API实现有相应的机制，主要学习它的机制流程。
