@@ -8,8 +8,8 @@ p, ul { font-size: 1em; line-height: 1em; color: #333; }
 
 h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 2.5em;  }
-h2 { font-size: 2em; color : #909090 }
-h3 { font-size: 1.5em; color : #494744 }
+h2 { font-size: 2em;}
+h3 { font-size: 1.5em; }
 h4 { font-size: 1em; }
 
 nav ul, footer ul { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
