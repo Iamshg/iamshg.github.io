@@ -6,7 +6,7 @@ a:hover { text-decoration: underline; }
 
 p, ul { font-size: 1em; line-height: 1em; color: #333; }
 
-h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
+h1, h2, h3, h4 { font-family: 'Cambria', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 2.5em;  }
 h2 { font-size: 2em;}
 h3 { font-size: 1.5em; }
@@ -25,6 +25,6 @@ ul.posts li { list-style: none; }
 .cv { margin: 0px 0px 60px; }
 .cv h1 { font-size: 3em; }
 .cv h2 { font-size: 2em; }
-.cv address, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
+.cv address, .cv .download { font-family: 'Cambria', 'Arial', 'Sans-Serif'; }
 .cv address, .cv p { font-size: 1.2em; }
 .cv .download { float: right; font-size: .8em; text-transform: uppercase; }
